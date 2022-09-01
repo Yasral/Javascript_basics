@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
-        <script>
-              function Comparaison(mass){
-		
-		let nombre1=document.mass.nombre1.value;
-		let nombre2=document.mass.nombre2.value;
-		let nombre3=document.mass.nombre3.value;
-        let Resultat=document.mass.Resultat.value;
-        
-		
-			
-		}
-        </script>
+        <title>Calculatrice</title>
+        <script src="app.js" defer></script>
     </head>
+
     <body>
-        <form name="mass">		
-            <label>nombre1</label>
-            <input type="text" name="nombre1" value=" " >
-            <label>nombre2</label>
-            <input type="text" name="nombre2" value=" " >
-            <label>nombre3</label>
-            <input type="text" name="nombre3" value=" " ><br><br>
+
+        <form>		
+            <label for="nombre1">nombre1</label>
+            <input type="number" name="nombre1" id="nombre1" placeholder="Entrez le premier nombre" required>
+
+            <label for="nombre2">nombre2</label>
+            <input type="number" name="nombre2" id="nombre2" placeholder="Entrez le second nombre" required>
+
+            <label for="nombre3">nombre3</label>
+            <input type="number" name="nombre3" id="nombre3" placeholder="Entrez le troisieme nombre" > <br><br>
             
-            <input type="button" name="Resultat" value=" Resultat"   onclick="Comparaison(mass)"><br><br>
-            <input type="button" name="add" value="Comparaison " onclick="Comparaison(mass)"></form >
+            <input type="submit" name="comparaison" id="comparaison" value="Comparaison">
+
+            <input type="submit" name="multiplication" id="multiplication" value="Multiplication">
+
+            <input type="submit" name="somme" id="somme" value="Somme">
+
+        </form >
+
+        <div class="content">
+            <p id="resultat">
+                Resultat : <span id="resultat"> </span>
+            </p>
+        </div>
     
     </body>
 </html>
